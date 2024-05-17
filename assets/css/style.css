@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 a {
   text-decoration: none !important;
@@ -43,31 +43,42 @@ li {
 .custom-card {
   width: 450px;
   padding: 30px 20px;
-  background-color: #FEE4DF;
+  background-color: #fee4df;
 }
-#service *::-webkit-scrollbar {
-  display: none;
+#service *::-webkit-scrollbar, .card-wrapper *::-webkit-scrollbar {
+  display: none !important;
 }
 
 #getKitten .header div:first-child {
   width: 165px;
   height: 123px;
-  background-color: #FFCA0F;
+  background-color: #ffca0f;
 }
 #getKitten .header div:last-child div {
   width: 123px;
   height: 123px;
-  background-color: #D9E4E2;
+  background-color: #d9e4e2;
 }
 #getKitten .banner {
-  background-color: #D9E4E2;
+  border-radius: 20px;
+  background-color: #d9e4e2;
 }
 #appointment {
-  background-image: linear-gradient(#5D9388, #42766C);
+  background-image: linear-gradient(#5d9388, #42766c);
 }
 .card-image {
   height: 261px;
-  background-color: #D7BFB8;
+  background-color: #d7bfb8;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .card-wrapper {
+    flex-wrap: nowrap !important;
+    overflow: auto !important;
+  }
+  .card {
+    flex-shrink: 0 !important;
+  }
 }
 @media (max-width: 992px) {
   .stat {
@@ -81,5 +92,69 @@ li {
   }
   .until-lg-no-radius {
     border-radius: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-text {
+    width: auto !important;
+  }
+  .custom-slider {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+  .banner {
+    border-radius: 0 !important;
+  }
+  .custom-card {
+    scale: 0.9;
+    /* width: 300px;
+    scale: 0.7; */
+  }
+  #getKitten .container .banner {
+    scale: .9;
+    border-radius: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    background-color: none !important;
+  }
+  #getKitten .header {
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+  }
+  .ig-box {
+    scale: .8;
+    margin-top: -30px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .card {
+    scale: .9 !important;
+  }
+  .custom-slider {
+    padding: 0 !important;
+    overflow: visible !important;
+    flex-direction: column;
+    align-items: center !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .custom-card {
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #getKitten .header h1 {
+    font-size: 1.2rem;
+  }
+  #getKitten .header p {
+    font-size: .9rem;
+  }
+  .ig-box {
+    scale: .7;
+    margin-top: -70px !important;
   }
 }
